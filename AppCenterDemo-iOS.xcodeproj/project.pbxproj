@@ -248,7 +248,7 @@
 				TargetAttributes = {
 					5238AA4D1FD258B9003482EA = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					5238AA651FD258BA003482EA = {
 						CreatedOnToolsVersion = 9.1;
@@ -630,12 +630,14 @@
 			baseConfigurationReference = 6D226FADE632A0DA0A271B69 /* Pods-AppCenterDemo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R27MT28R2X;
 				INFOPLIST_FILE = "AppCenterDemo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msdn.AppCenterDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5c35f0e4-c6db-4836-bc1e-efc2b6ba9edc";
+				PROVISIONING_PROFILE_SPECIFIER = AmyDevelop;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -645,12 +647,15 @@
 			baseConfigurationReference = 95F6359FC4443FBB8EE46868 /* Pods-AppCenterDemo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R27MT28R2X;
 				INFOPLIST_FILE = "AppCenterDemo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msdn.AppCenterDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "704fe86b-11c5-462e-bc15-311c0ff533ab";
+				PROVISIONING_PROFILE_SPECIFIER = commsdnProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
