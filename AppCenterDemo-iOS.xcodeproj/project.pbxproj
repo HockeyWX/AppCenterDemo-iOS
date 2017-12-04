@@ -55,6 +55,7 @@
 		5238AA711FD258BA003482EA /* AppCenterDemo-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppCenterDemo-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5238AA751FD258BA003482EA /* AppCenterDemo_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCenterDemo_iOSUITests.m; sourceTree = "<group>"; };
 		5238AA771FD258BA003482EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529AF7421FD55DDA009BEE0B /* AppCenterDemo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AppCenterDemo-iOS.entitlements"; sourceTree = "<group>"; };
 		5C33C7FFAC9C21C45917E542 /* libPods-AppCenterDemo-iOSUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppCenterDemo-iOSUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CEC2EE4FF5D668E96D18F13 /* Pods-AppCenterDemo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCenterDemo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppCenterDemo-iOSTests/Pods-AppCenterDemo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D226FADE632A0DA0A271B69 /* Pods-AppCenterDemo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCenterDemo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppCenterDemo-iOS/Pods-AppCenterDemo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +142,7 @@
 		5238AA501FD258B9003482EA /* AppCenterDemo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				529AF7421FD55DDA009BEE0B /* AppCenterDemo-iOS.entitlements */,
 				5238AA511FD258B9003482EA /* AppDelegate.h */,
 				5238AA521FD258B9003482EA /* AppDelegate.m */,
 				5238AA541FD258B9003482EA /* ViewController.h */,
@@ -249,6 +251,11 @@
 					5238AA4D1FD258B9003482EA = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					5238AA651FD258BA003482EA = {
 						CreatedOnToolsVersion = 9.1;
@@ -630,14 +637,15 @@
 			baseConfigurationReference = 6D226FADE632A0DA0A271B69 /* Pods-AppCenterDemo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AppCenterDemo-iOS/AppCenterDemo-iOS.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R27MT28R2X;
 				INFOPLIST_FILE = "AppCenterDemo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msdn.AppCenterDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5c35f0e4-c6db-4836-bc1e-efc2b6ba9edc";
-				PROVISIONING_PROFILE_SPECIFIER = AmyDevelop;
+				PROVISIONING_PROFILE = "d6544820-d985-4d32-b57a-21cec96eab8f";
+				PROVISIONING_PROFILE_SPECIFIER = "AppCenterDemo-iOS-development-with-push";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -647,6 +655,7 @@
 			baseConfigurationReference = 95F6359FC4443FBB8EE46868 /* Pods-AppCenterDemo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AppCenterDemo-iOS/AppCenterDemo-iOS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R27MT28R2X;
@@ -654,8 +663,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msdn.AppCenterDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "704fe86b-11c5-462e-bc15-311c0ff533ab";
-				PROVISIONING_PROFILE_SPECIFIER = commsdnProfile;
+				PROVISIONING_PROFILE = "2d0b4d71-cede-4171-a889-adf02801235a";
+				PROVISIONING_PROFILE_SPECIFIER = "AppCenterDemo-iOS-with-push";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
