@@ -78,7 +78,17 @@
     return YES;
 }
 
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    
+    NSLog(@"%@",userInfo);
+    NSNumber *content_available = [[userInfo objectForKey:@"aps"] objectForKey:@"content-available"];
+    BOOL isSilentPush = (content_available=@1)?true:false;
+    if (isSilentPush) {
+        NSLog(@"Silent Push");
+    }
+    
+    
     
     
 }
