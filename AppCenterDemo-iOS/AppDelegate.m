@@ -37,7 +37,7 @@
 
 
 
-// Before the Crash Report process.
+// Before the Crash Report process. Popup query alert.
 - (BOOL)crashes:(MSCrashes *)crashes shouldProcessErrorReport:(MSErrorReport *)errorReport{
     
     // Add these lines to ask user if he wants to send the crash report to AppCenter Server.
@@ -76,6 +76,11 @@
     })];
     
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    
+    
 }
 
 
