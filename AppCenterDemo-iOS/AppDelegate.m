@@ -31,6 +31,8 @@
                                                                               ]];
     [MSCrashes setDelegate:self];
     
+
+    
     return YES;
 }
 
@@ -78,19 +80,35 @@
     return YES;
 }
 
-
+// Receive the Remote Push Notification and handle it.
+// If the normal push notification is enabled as a silent with alert title or body, this delegate will be trigger twice, while the notification come in and user tap on the alert.
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
     
-    NSLog(@"%@",userInfo);
-    NSNumber *content_available = [[userInfo objectForKey:@"aps"] objectForKey:@"content-available"];
-    BOOL isSilentPush = (content_available=@1)?true:false;
+    NSLog(@"Push Notification UserInfo: %@",userInfo);
+    NSNumber *content_available = (NSNumber *)[[userInfo objectForKey:@"aps"] objectForKey:@"content-available"];
+    BOOL isSilentPush = [content_available isEqual:@1]?true:false;
     if (isSilentPush) {
         NSLog(@"Silent Push");
     }
     
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
+        NSLog(@"- Active");
+    }else if([UIApplication sharedApplication].applicationState == UIApplicationStateInactive){
+        NSLog(@"- Inactive");
+    }else{
+        NSLog(@"- Background");
+    }
+    
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (NSArray<MSErrorAttachmentLog *> *)attachmentsWithCrashes:(MSCrashes *)crashes
+                                             forErrorReport:(MSErrorReport *)errorReport{
     
     
-    
+    MSErrorAttachmentLog *attachment1 = [MSErrorAttachmentLog attachmentWithText:@"Hello world!" filename:@"CrashAttachments.txt"];
+    //MSErrorAttachmentLog *attachment2 = [MSErrorAttachmentLog attachmentWithBinary:[@"Fake image" dataUsingEncoding:NSUTF8StringEncoding] filename:@"fake_image.jpeg" contentType:@"image/jpeg"];
+    return @[ attachment1 ];
 }
 
 
