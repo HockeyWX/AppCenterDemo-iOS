@@ -271,12 +271,12 @@
 					};
 					5238AA651FD258BA003482EA = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 5238AA4D1FD258B9003482EA;
 					};
 					5238AA701FD258BA003482EA = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 5238AA4D1FD258B9003482EA;
 					};
 				};
@@ -688,12 +688,13 @@
 			baseConfigurationReference = 93B92F75DD9A96635C434CE1 /* Pods-AppCenterDemo-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R27MT28R2X;
 				INFOPLIST_FILE = "AppCenterDemo-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msdn.AppCenterDemo-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppCenterDemo-iOS.app/AppCenterDemo-iOS";
 			};
@@ -704,12 +705,13 @@
 			baseConfigurationReference = 6CEC2EE4FF5D668E96D18F13 /* Pods-AppCenterDemo-iOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R27MT28R2X;
 				INFOPLIST_FILE = "AppCenterDemo-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msdn.AppCenterDemo-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppCenterDemo-iOS.app/AppCenterDemo-iOS";
 			};
@@ -720,13 +722,14 @@
 			baseConfigurationReference = 22C9C56A3E2C9593C3D290D0 /* Pods-AppCenterDemo-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = R27MT28R2X;
 				INFOPLIST_FILE = "AppCenterDemo-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msdn.AppCenterDemo-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5c35f0e4-c6db-4836-bc1e-efc2b6ba9edc";
+				PROVISIONING_PROFILE_SPECIFIER = AmyDevelop;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "AppCenterDemo-iOS";
 			};
@@ -737,13 +740,14 @@
 			baseConfigurationReference = D7DD592E0F6FACE76D9CAD6D /* Pods-AppCenterDemo-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = R27MT28R2X;
 				INFOPLIST_FILE = "AppCenterDemo-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msdn.AppCenterDemo-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5c35f0e4-c6db-4836-bc1e-efc2b6ba9edc";
+				PROVISIONING_PROFILE_SPECIFIER = AmyDevelop;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "AppCenterDemo-iOS";
 			};
