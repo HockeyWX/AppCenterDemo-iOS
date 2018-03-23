@@ -3,7 +3,7 @@ echo "username: $username"
 password=$PASSWORD
 echo "password: $PASSWORD"
 
-curl -X GET "https://api.appcenter.ms/v0.1/user" -H "accept: application/json" -H "X-API-Token: 4069c5031d6b9a6054a3d16b7f3bdaafb2997fe5"
+CURL="curl -X GET 'https://api.appcenter.ms/v0.1/user' -H 'accept:application/json' -H 'X-API-Token:4069c5031d6b9a6054a3d16b7f3bdaafb2997fe5'"
 
 #cd $APPCENTER_SOURCE_DIRECTORY
 #echo "build id:"
