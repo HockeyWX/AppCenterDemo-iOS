@@ -24,7 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [MSAppCenter start:@"45f030ed-cfe3-473e-b154-3c3d2553d747" withServices:@[
+    [MSAppCenter start:@"8c0098d1-dcd7-4eed-ae1e-b81d08144b3f" withServices:@[
                                                                               [MSAnalytics class],
                                                                               [MSCrashes class],
                                                                               [MSPush class],
