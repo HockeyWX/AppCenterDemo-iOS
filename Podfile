@@ -6,7 +6,7 @@ target 'AppCenterDemo-iOS' do
   # use_frameworks!
 
   # Pods for AppCenterDemo-iOS
-
+  # Just test
   pod 'AppCenter'
   pod 'AppCenter/Distribute'
   pod 'AppCenter/Push'
