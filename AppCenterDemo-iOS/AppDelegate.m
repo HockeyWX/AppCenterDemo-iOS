@@ -52,7 +52,7 @@
         
         // Your code to present your UI to the user, e.g. an UIAlertController.
         UIAlertController *alertController = [UIAlertController
-                                              alertControllerWithTitle:@"Sorry about that!"
+                                              alertControllerWithTitle:@"Sorr!"
                                               message:@"Do you want to send an anonymous crash report so we can fix the issue?"
                                               preferredStyle:UIAlertControllerStyleAlert];
         
