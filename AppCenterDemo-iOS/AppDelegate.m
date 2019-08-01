@@ -23,7 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    // Test
+    // Hello 
+
     
     [MSAppCenter start:@"8bb2e0c2-2336-4fe9-956b-968533de871d" withServices:@[
                                                                               [MSAnalytics class],
