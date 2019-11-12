@@ -34,7 +34,7 @@
     [MSCrashes setDelegate:self];
     
 
- 
+    // this is code
     
     return YES;
 }
